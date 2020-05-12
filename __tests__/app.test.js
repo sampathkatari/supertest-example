@@ -60,7 +60,7 @@ describe('Api testing', () => {
         }
         request(app)
         .get('/user/2')
-        .expect(200) //This is supposed to be 400
+        .expect(400)
         .end((err, res) => {
             expect(res.body).toEqual(expectedResponse)
             done();
